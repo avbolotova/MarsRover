@@ -19,18 +19,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="false"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/black"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/detImage"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="250dp"
                 android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
+                android:src="@drawable/longimage"
+                android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/detAddFt"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="right"
+                android:padding="10dp"
+                android:src="@drawable/ic_turned_in_not_24" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -43,6 +52,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -54,87 +64,84 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
+
+            <TableLayout
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:padding="10dp">
 
+                <TableRow>
 
-                <TextView
-                    android:id="@+id/detRover"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_weight="1"
-                    android:textAlignment="textStart"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    tool:text="Марсоход" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Mars Rover FHAZ"
+                        android:textColor="@color/black_grey"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/detAddFt"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:padding="5dp"
-                    android:src="@drawable/ic_turned_in_not_24"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.043"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.072" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" />
+                </TableRow>
 
+                <TableRow>
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Date on Mars"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/DetEarthdate"
-                android:layout_width="match_parent"
-                android:gravity="left"
-                android:layout_margin="10dp"
-                android:padding="5sp"
-                android:textColor="@color/grey"
-                android:textSize="15sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="4dp"
-                android:textAlignment="gravity"
-                android:text="Earth_date" />
+                    <TextView
+                        android:id="@+id/DetEarthdate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2012-08-06" />
+                </TableRow>
 
-            <TextView
-                android:id="@+id/DetCamera"
-                android:layout_width="match_parent"
-                android:gravity="left"
-                android:layout_margin="10dp"
-                android:padding="5sp"
-                android:textColor="@color/grey"
-                android:textSize="15sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="4dp"
-                android:textAlignment="gravity"
-                android:text="Camera" />
+                <TableRow>
 
-            <TextView
-                android:id="@+id/DetlanDate"
-                android:layout_width="match_parent"
-                android:gravity="left"
-                android:layout_margin="10dp"
-                android:padding="5sp"
-                android:textColor="@color/grey"
-                android:textSize="15sp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="4dp"
-                android:textAlignment="gravity"
-                android:text="landing_date" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Rover Cameras"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/DetCamera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Front Hazard Avoidance Camera" />
+                </TableRow>
 
+                <TableRow>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Date on Earth"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:id="@+id/DetlanDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="2015-05-30" />
+                </TableRow>
+
+            </TableLayout>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

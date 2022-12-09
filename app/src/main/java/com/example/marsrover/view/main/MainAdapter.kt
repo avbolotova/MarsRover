@@ -10,6 +10,7 @@ import com.example.marsrover.MAIN
 import com.example.marsrover.R
 import com.example.marsrover.model.Photo
 
+
 class MainAdapter : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
 
     private var listPhotos = emptyList<Photo>()
@@ -22,10 +23,13 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+//        holder.itemView.findViewById<TextView>(R.id.eachName).text = listPhotos[position].rover.name
+        holder.itemView.findViewById<TextView>(R.id.eachName).text = listPhotos[position].earth_date
 
         Glide.with(MAIN)
             .load(listPhotos[position].img_src)
-            .placeholder(R.drawable.ic_launcher_background)
+            .centerCrop()
+            .placeholder(R.drawable.ic_launcher_foreground)
             .into(holder.itemView.findViewById(R.id.eachImage))
     }
 
@@ -40,7 +44,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
         override fun onViewAttachedToWindow(holder: MyViewHolder) {
             super.onViewAttachedToWindow(holder)
             holder.itemView.setOnClickListener {
-                MainFragment.clickFilms(listPhotos[holder.adapterPosition])
+                MainFragment.clickPhotos(listPhotos[holder.adapterPosition])
             }
         }
     }

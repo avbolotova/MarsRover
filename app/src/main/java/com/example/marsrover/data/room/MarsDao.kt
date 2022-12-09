@@ -4,15 +4,15 @@ import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.marsrover.model.Photo
 
-//@Dao
+@Dao
 interface MarsDao {
 
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    suspend fun insert(item: Photo)
-//
-//    @Delete
-//    suspend fun delete(item: Photo)
-//
-//    @Query("SELECT * from photo_table")
-//    fun getAllPhoto() : LiveData<List<Photo>>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(item: Photo)
+
+    @Delete
+    suspend fun delete(item: Photo)
+
+    @Query("SELECT * from photo_mars")
+    fun getAllPhoto() : LiveData<List<Photo>>
 }

@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 
 interface ApiInterface {
-    @GET("mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=uundcCnn1JUXbqBaGabUlzAY2W51NI1LbtEAJI0b")
+    @GET("mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=xNOgrUW7h2YN64QVx54wQZ6uBPRGy0QTHqCsyF2Z")
     suspend fun getPhotoMars(): Response<ModelPhoto>
 }

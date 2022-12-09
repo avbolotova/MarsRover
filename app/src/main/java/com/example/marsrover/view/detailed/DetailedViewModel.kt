@@ -9,15 +9,15 @@ import kotlinx.coroutines.launch
 
 class DetailedViewModel : ViewModel() {
 
-//    fun insert(item: Photo, onSuccess:() -> Unit) = viewModelScope.launch (Dispatchers.IO) {
-//        REALIZATION.insertPhoto(item) {
-//            onSuccess()
-//        }
-//    }
-//
-//    fun delete(item: Photo, onSuccess:() -> Unit) = viewModelScope.launch (Dispatchers.IO) {
-//        REALIZATION.deletePhoto(item) {
-//            onSuccess()
-//        }
-//    }
+    fun insert(item: Photo, onSuccess:() -> Unit) = viewModelScope.launch (Dispatchers.IO) {
+        REALIZATION.insertPhoto(item) {
+            onSuccess()
+        }
+    }
+
+    fun delete(item: Photo, onSuccess:() -> Unit) = viewModelScope.launch (Dispatchers.IO) {
+        REALIZATION.deletePhoto(item) {
+            onSuccess()
+        }
+    }
 }

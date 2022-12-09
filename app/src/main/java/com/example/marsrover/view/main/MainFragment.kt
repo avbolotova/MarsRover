@@ -34,18 +34,18 @@ class MainFragment : Fragment() {
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-//        viewModel.initDatabase()
+        viewModel.initDatabase()
         recyclerView = binding.recyclerView
         recyclerView.adapter = adapter
         viewModel.getPhotos()
-        viewModel.myMovies.observe(viewLifecycleOwner, {
+        viewModel.myPhoto.observe(viewLifecycleOwner, {
             adapter.setList(it.body()!!.photos)
         })
     }
     companion object {
-        fun clickFilms(photo: Photo) {
+        fun clickPhotos(model: Photo) {
             val bundle = Bundle()
-            bundle.putSerializable("getPhoto", photo)
+            bundle.putSerializable("getPhoto", model)
             MAIN.navController.navigate(R.id.action_mainFragment_to_detailedFragment, bundle)
         }
     }

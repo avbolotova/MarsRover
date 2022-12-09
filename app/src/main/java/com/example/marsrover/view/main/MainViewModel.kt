@@ -14,16 +14,16 @@ import retrofit2.Response
 
 class MainViewModel (application: Application): AndroidViewModel(application) {
     val repo = RetrofitRepo()
-    val myMovies: MutableLiveData<Response<ModelPhoto>> = MutableLiveData()
+    val myPhoto: MutableLiveData<Response<ModelPhoto>> = MutableLiveData()
     val context = application
 
     fun getPhotos(){
         viewModelScope.launch {
-            myMovies.value = repo.getPhotos()
+            myPhoto.value = repo.getPhotos()
         }
     }
-//    fun initDatabase(){
-//        val daoPhoto = MarsDataBase.getInstance(context).getPhotoDao()
-//        REALIZATION = MarsRealization(daoPhoto)
-//    }
+    fun initDatabase(){
+        val daoPhoto = MarsDataBase.getInstance(context).getPhotoDao()
+        REALIZATION = MarsRealization(daoPhoto)
+    }
 }
