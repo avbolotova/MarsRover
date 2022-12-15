@@ -22,7 +22,6 @@ class SavedAdapter : RecyclerView.Adapter<SavedAdapter.SavedViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: SavedViewHolder, position: Int) {
-//        holder.itemView.findViewById<TextView>(R.id.eachName).text = listPhoto[position].rover.name
         holder.itemView.findViewById<TextView>(R.id.CardDate).text = listPhoto[position].earth_date
 
         Glide.with(MAIN)

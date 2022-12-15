@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.marsrover.REALIZATION
 import com.example.marsrover.model.Photo
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SavedViewModel : ViewModel() {
@@ -18,4 +19,5 @@ class SavedViewModel : ViewModel() {
             REALIZATION.deletePhoto(item) {}
         }
     }
+
 }

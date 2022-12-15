@@ -23,7 +23,6 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-//        holder.itemView.findViewById<TextView>(R.id.eachName).text = listPhotos[position].rover.name
         holder.itemView.findViewById<TextView>(R.id.eachName).text = listPhotos[position].earth_date
 
         Glide.with(MAIN)
