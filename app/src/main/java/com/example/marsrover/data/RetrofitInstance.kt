@@ -1,10 +1,13 @@
 package com.example.marsrover.data
 
 import com.example.marsrover.BASE_URL
+import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.internal.managers.ApplicationComponentManager
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -33,3 +36,6 @@ object RetrofitInstance {
         retrofit.create(ApiInterface::class.java)
     }
 }
+
+
+

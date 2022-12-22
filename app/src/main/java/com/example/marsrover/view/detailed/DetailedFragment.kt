@@ -13,7 +13,7 @@ import com.example.marsrover.MAIN
 import com.example.marsrover.R
 import com.example.marsrover.databinding.FragmentDetailedBinding
 import com.example.marsrover.model.Photo
-import org.junit.Test
+
 
 class DetailedFragment : Fragment() {
 
