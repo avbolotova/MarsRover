@@ -4,14 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Downloads/MarsRover/app/src/main/res/drawable/selector.xml" value="0.1" />
-        <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/card_photos.xml" value="0.33" />
-        <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/each_add.xml" value="0.33" />
+        <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/card_photos.xml" value="0.22" />
+        <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/each_add.xml" value="0.5" />
         <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/frafment_main.xml" value="0.22" />
         <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/fragment_detailed.xml" value="0.33" />
         <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/fragment_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Downloads/MarsRover/app/src/main/res/layout/fragment_saved.xml" value="0.1" />
         <entry key="..\:/Downloads/MarsRover/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/MarsRover/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/MarsRover/app/src/main/res/layout/fragment_detailed.xml" value="0.36666666666666664" />
+        <entry key="..\:/MarsRover/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

@@ -23,6 +23,7 @@ android {
         viewBinding.enabled = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
 
     buildTypes {
