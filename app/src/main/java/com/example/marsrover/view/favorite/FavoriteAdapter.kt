@@ -1,4 +1,4 @@
-package com.example.marsrover.view.saved
+package com.example.marsrover.view.favorite
 
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import com.example.marsrover.MAIN
 import com.example.marsrover.R
 import com.example.marsrover.model.Photo
 
-class SavedAdapter : RecyclerView.Adapter<SavedAdapter.SavedViewHolder>() {
+class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.SavedViewHolder>() {
 
     private var listPhoto = emptyList<Photo>()
 

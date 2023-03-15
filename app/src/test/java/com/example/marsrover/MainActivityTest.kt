@@ -1,7 +1,6 @@
 package com.example.marsrover
 
 import android.view.View
-import androidx.navigation.NavController
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.UiController
@@ -37,7 +36,7 @@ class MainActivityTest {
                 clickOnViewChild(R.id.eachImage)
             )
         )
-        Espresso.onView(withId(R.id.savedPhotos)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(withId(R.id.favoritePhoto)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.pressBack()
 
     }

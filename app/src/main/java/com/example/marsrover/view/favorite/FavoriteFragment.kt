@@ -1,4 +1,4 @@
-package com.example.marsrover.view.saved
+package com.example.marsrover.view.favorite
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,30 +8,35 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.marsrover.databinding.FragmentSavedBinding
+import com.example.marsrover.MAIN
+import com.example.marsrover.R
+import com.example.marsrover.databinding.FragmentFavoriteBinding
 import com.example.marsrover.model.Photo
 
-class SavedFragment : Fragment() {
+class FavoriteFragment : Fragment() {
 
-    private lateinit var mBind: FragmentSavedBinding
+    private lateinit var mBind: FragmentFavoriteBinding
     private val binding get() = mBind
     lateinit var recyclerView: RecyclerView
-    private val adapter by lazy { SavedAdapter() }
+    private val adapter by lazy { FavoriteAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        mBind = FragmentSavedBinding.inflate(layoutInflater, container, false)
+        mBind = FragmentFavoriteBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+
     }
 
+
+
     private fun init() {
-        val viewModel = ViewModelProvider(this).get(SavedViewModel::class.java)
+        val viewModel = ViewModelProvider(this).get(FavoriteViewModel::class.java)
         recyclerView = binding.recyclerViewFav
         recyclerView.adapter = adapter
         viewModel.getAllSavedPhoto().observe(viewLifecycleOwner,{
@@ -58,3 +63,4 @@ class SavedFragment : Fragment() {
         itemTouchHelper.attachToRecyclerView(recyclerView)
     }
 }
+

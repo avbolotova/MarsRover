@@ -43,19 +43,19 @@ class DetailedFragment : Fragment() {
             .load(currentPhoto.img_src)
             .fitCenter()
             .placeholder(R.drawable.ic_launcher_foreground)
-            .into(binding.detImage)
+            .into(binding.imgDetailed)
         binding.DetlanDate.text = currentPhoto.earth_date
 
 
 
-        binding.detAddFt.setOnClickListener {
+        binding.favoriteFilms.setOnClickListener {
             isAddPhoto = if(!isAddPhoto) {
-                binding.detAddFt.setImageResource(R.drawable.ic_turned_in_not_24)
+                binding.favoriteFilms.setImageResource(R.drawable.favorite_line_red)
                 viewModel.insert(currentPhoto){
                 }
                 true
             } else {
-                binding.detAddFt.setImageResource(R.drawable.ic_turned_in_24)
+                binding.favoriteFilms.setImageResource(R.drawable.favorite_full_red)
                 viewModel.delete(currentPhoto){
                 }
                 false

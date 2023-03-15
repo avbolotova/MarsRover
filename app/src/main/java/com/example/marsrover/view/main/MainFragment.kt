@@ -6,11 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marsrover.MAIN
 import com.example.marsrover.R
 import com.example.marsrover.databinding.FragmentMainBinding
 import com.example.marsrover.model.Photo
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MainFragment : Fragment() {
 
@@ -37,6 +40,7 @@ class MainFragment : Fragment() {
         viewModel.initDatabase()
         recyclerView = binding.recyclerView
         recyclerView.adapter = adapter
+        recyclerView.layoutManager = GridLayoutManager(context, 2)
         viewModel.getPhotos()
         viewModel.myPhoto.observe(viewLifecycleOwner, {
             adapter.setList(it.body()!!.photos)

@@ -2,13 +2,11 @@ package com.example.marsrover
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.ui.NavigationUI
 import com.example.marsrover.databinding.ActivityMainBinding
 import com.example.marsrover.view.main.MainFragment
-import com.example.marsrover.view.saved.SavedFragment
+import com.example.marsrover.view.favorite.FavoriteFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -37,8 +35,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.home -> supportFragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainerView, MainFragment())
                     .commit()
-                R.id.savedPhotos -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, SavedFragment())
+                R.id.favoritePhoto -> supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, FavoriteFragment())
+                    .addToBackStack(MainFragment().toString())
                     .commit()
                 else -> {
                 }
