@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "867447822118",
+    "project_id": "marsrover-dee68",
+    "storage_bucket": "marsrover-dee68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867447822118:android:606bd92f4b9670e57753e7",
+        "android_client_info": {
+          "package_name": "com.example.filmtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867447822118-j3f2n7g12rvj5mf1ohcaihfssum87h88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQpbHhV-2HjIfFFPxTXw8g-t38mCV-Jrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867447822118-j3f2n7g12rvj5mf1ohcaihfssum87h88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867447822118:android:93491226afe379497753e7",
+        "android_client_info": {
+          "package_name": "com.example.marsrover"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867447822118-j3f2n7g12rvj5mf1ohcaihfssum87h88.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQpbHhV-2HjIfFFPxTXw8g-t38mCV-Jrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867447822118-j3f2n7g12rvj5mf1ohcaihfssum87h88.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
